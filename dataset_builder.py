@@ -96,6 +96,11 @@ def generate_random_data():
     
     current_date = start_date
     while current_date <= end_date:
+        # 방학 기간은 제외
+        month = current_date.month
+        if month in [1, 2, 7, 8]:
+            current_date += delta
+            continue  # 해당 월이면 데이터 생성 건너뜀
         if current_date.weekday() < 5:  # 월요일=0, 금요일=4
             day = current_date.weekday() + 1  # 요일 (월요일=1, 금요일=5)
             date_str = current_date.strftime('%Y-%m-%d')
