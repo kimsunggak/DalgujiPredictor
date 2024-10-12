@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+# dc_application_1
+
+A new Flutter project.
+
+## Getting Started
+
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
+=======
 # 💻 프로젝트 소개 
 ## 🚌 **달구지 탑승 인원 예측 서비스** 🚌
 강남대 셔틀버스 '달구지'의 특정 시간대 탑승 인원을 예측하여, 대기 시간을 줄이고 보다 효율적인 버스 이용을 돕는 서비스입니다.
@@ -67,3 +85,4 @@
 
 ## 🔧 설치 및 실행 방법
 
+>>>>>>> 772693919c2093ff8fb4233b62dcc86c9555acb4
