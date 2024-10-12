@@ -1,8 +1,9 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from xgboost import XGBRegressor
+import pickle
 #데이터 불러오기
-df = pd.read_csv('ki.csv')
+df = pd.read_csv('dataset/ki.csv')
 
 # 데이터 전처리
 # 'Time' 열을 분 단위로 변환하는 함수 설정
@@ -72,3 +73,8 @@ plt.title('Feature Importances in XGBOOST')
 plt.xlabel('Importance')
 plt.ylabel('Feature')
 plt.show()
+"""
+# 모델 저장
+with open('xgboost_model.pkl', 'wb') as file:
+    pickle.dump(XG_model, file)
+"""
