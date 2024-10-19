@@ -50,7 +50,7 @@ XG_model.fit(x_train, y_train)
 
 # 테스트 데이터에 대한 예측 수행
 y_pred = XG_model.predict(x_test)
-
+"""
 #모델 평가
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
@@ -77,4 +77,3 @@ plt.show()
 # 모델 저장
 with open('xgboost_model.pkl', 'wb') as file:
     pickle.dump(XG_model, file)
-"""
