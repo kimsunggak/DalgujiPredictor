@@ -11,6 +11,10 @@
 .svn/
 migrate_working_dir/
 
+# Flutter 자동 생성 파일들
+**/generated_plugin_registrant.*
+**/generated_plugins.cmake
+
 # IntelliJ related
 *.iml
 *.ipr
