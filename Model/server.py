@@ -29,7 +29,7 @@ async def read_root():
 
 @app.post("/predict")
 async def predict(request: PredictionInput):
-    # 요청 데이터 비동기적으로 받기
+    # 요청 데이터 확인
     request_data = request.dict()
     
     # 요청 데이터를 데이터프레임으로 변환
