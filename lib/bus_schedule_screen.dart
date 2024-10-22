@@ -45,7 +45,7 @@ class BusScheduleScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        '2024-2 학기 순환버스 운행 시간표',
+                        '2024-2학기 순환버스 운행 시간표',
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -61,7 +61,9 @@ class BusScheduleScreen extends StatelessWidget {
                       const SizedBox(height: 10),
                       const Text(
                         '🚍강남대학교 → 기흥역(4번 출구)',
-                        style: TextStyle(fontSize: 18),
+                        style: TextStyle(
+                          fontSize: 18,
+                        ),
                         textAlign: TextAlign.center,
                       ),
                       const SizedBox(height: 20),
@@ -72,11 +74,21 @@ class BusScheduleScreen extends StatelessWidget {
                           radius: const Radius.circular(10),
                           child: ListView(
                             children: [
-                              // 각각의 버튼에 맞는 라우팅 설정
-                              _buildCustomButton(context, '기흥역 출발(4번 출구)', '월요일, 금요일', const Color(0xFF2A69A1), '/giheungDeparture15'),
-                              _buildCustomButton(context, '이공관 출발', '월요일, 금요일', const Color(0xFF496E30), '/gongwanDeparture15'),
-                              _buildCustomButton(context, '기흥역 출발(4번 출구)', '화요일, 수요일, 목요일', const Color(0xFF2A69A1), '/giheungDeparture234'),
-                              _buildCustomButton(context, '이공관 출발', '화요일, 수요일, 목요일', const Color(0xFF496E30), '/gongwanDeparture234'),
+                              // "기흥역 출발" 버튼들만 남김
+                              _buildCustomButton(
+                                context,
+                                '기흥역 출발(4번 출구)',
+                                '월요일, 금요일',
+                                const Color(0xFF2A69A1),
+                                '/giheungDeparture15',
+                              ),
+                              _buildCustomButton(
+                                context,
+                                '기흥역 출발(4번 출구)',
+                                '화요일, 수요일, 목요일',
+                                const Color(0xFF2A69A1),
+                                '/giheungDeparture234',
+                              ),
                             ],
                           ),
                         ),
@@ -92,14 +104,20 @@ class BusScheduleScreen extends StatelessWidget {
     );
   }
 
-  // 버튼 생성 함수. 각 버튼마다 title, subtitle, borderColor, onTap route를 전달받음
-  Widget _buildCustomButton(BuildContext context, String title, String subtitle, Color borderColor, String route) {
+  // 버튼 생성 함수
+  Widget _buildCustomButton(
+    BuildContext context,
+    String title,
+    String subtitle,
+    Color borderColor,
+    String route,
+  ) {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 8),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(8),  // 라운드 모서리를 8로 설정
+        borderRadius: BorderRadius.circular(8), // 라운드 모서리를 8로 설정
         border: Border.all(
           color: borderColor,
           width: 2,
