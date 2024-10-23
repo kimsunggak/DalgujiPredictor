@@ -186,7 +186,7 @@ class InputFormScreenState extends State<InputFormScreen> {
 
       try {
         // 서버 URL 설정
-        final url = Uri.parse('https://074d-121-166-5-31.ngrok-free.app/predict');
+        final url = Uri.parse('https://0516-211-238-109-139.ngrok-free.app/predict');
         print('요청 URL: $url');
         print('요청 데이터: $requestData');
         print('서버로 요청을 보냅니다.');
